@@ -35,9 +35,9 @@ echo.
 echo.
 echo.
 echo.
-echo                      ±êÌâ»¹Ã»ÏëºÃ
+echo                      æ ‡é¢˜è¿˜æ²¡æƒ³å¥½
 echo.
-echo                 °´  ÈÎ  Òâ  ¼ü  ¿ª  Ê¼
+echo                 æŒ‰  ä»»  æ„  é”®  å¼€  å§‹
 echo.
 echo.
 echo.
@@ -57,17 +57,17 @@ echo.
 echo.
 echo.
 echo.
-echo                      ±êÌâ»¹Ã»ÏëºÃ
+echo                      æ ‡é¢˜è¿˜æ²¡æƒ³å¥½
 echo.
-echo                      1.´ÓÍ·¿ªÊ¼
+echo                      1.ä»å¤´å¼€å§‹
 echo.
-echo                      2.¶ÁÈ¡´æµµ
+echo                      2.è¯»å–å­˜æ¡£
 echo.
-echo                      3.É¾³ı´æµµ
+echo                      3.åˆ é™¤å­˜æ¡£
 echo.
-echo                      4.¹ØÓÚ
+echo                      4.å…³äº
 echo.
-echo                      5.ÍË³ö
+echo                      5.é€€å‡º
 echo.
 echo.
 echo.
@@ -75,7 +75,7 @@ echo.
 echo.
 echo.
 echo =====================================================================================
-set /p msg=ÇëÊäÈëÑ¡ÏîÇ°µÄÊı×Ö£¬È»ºó»Ø³µÈ·ÈÏ£º
+set /p msg=è¯·è¾“å…¥é€‰é¡¹å‰çš„æ•°å­—ï¼Œç„¶åå›è½¦ç¡®è®¤ï¼š
 if %msg% == 1 goto 1
 if %msg% == 2 goto read1
 if %msg% == 3 goto delete
@@ -87,28 +87,28 @@ goto tty
 set /a t1=%t1% + 1
 if %t1%== 1 goto help
 if %t1%== 2 goto stop
-if %t1%== 3 cls && echo ºÃ°É£¬ÄãÓĞµãÀ÷º¦£¬ÕæµÄ¡£ && goto kill
+if %t1%== 3 cls && echo å¥½å§ï¼Œä½ æœ‰ç‚¹å‰å®³ï¼ŒçœŸçš„ã€‚ && goto kill
 goto leave
 
 
 :help
 cls
-echo ÄãÈ·¶¨Ã»ÓĞÊä´íÂğ£¿
+echo ä½ ç¡®å®šæ²¡æœ‰è¾“é”™å—ï¼Ÿ
 pause
 cls
 goto main
 
 :stop
 cls
-echo ²»»áÊäÂğ£¿À¨ºÅÀïÓĞÌáÊ¾µÄ¡£
+echo ä¸ä¼šè¾“å—ï¼Ÿæ‹¬å·é‡Œæœ‰æç¤ºçš„ã€‚
 pause
 cls
 goto main
 
 :kill
-echo ÊäÈëÈÎºÎÄÚÈİÒÔÍË³ö,³ı·ÇÄãÕæµÄÃ÷°×ÁËÈçºÎÊäÈë¡£(sorry)
+echo è¾“å…¥ä»»ä½•å†…å®¹ä»¥é€€å‡º,é™¤éä½ çœŸçš„æ˜ç™½äº†å¦‚ä½•è¾“å…¥ã€‚(sorry)
 set /p fk=
-if %fk% == sorry echo ºÃ°É£¬ÎÒÖªµÀÄãÃ÷°×ÁË && ping -n 2 127.0.0.1 >nul && goto mainb
+if %fk% == sorry echo å¥½å§ï¼Œæˆ‘çŸ¥é“ä½ æ˜ç™½äº† && ping -n 2 127.0.0.1 >nul && goto mainb
 exit
 
 :mainb
@@ -119,8 +119,8 @@ cls
 goto main
 
 :leave
-echo °¡ÎÒÕæµÄ·şÁË¡­¡­
-echo ÊäÈëÈÎºÎÄÚÈİÒÔÍË³ö¡£
+echo å•Šæˆ‘çœŸçš„æœäº†â€¦â€¦
+echo è¾“å…¥ä»»ä½•å†…å®¹ä»¥é€€å‡ºã€‚
 pause >nul
 exit
 
@@ -133,11 +133,11 @@ goto read2
 :read2
 cls
 dir /b
-set rd=«”ªBßdÁƒÃ›
-set /p rd=ÇëÑ¡ÔñÉÏÊö´æµµÖ®Ò»ÒÔ¶ÁÈ¡£¨ÊäÈë´æµµÃû×Öºó»Ø³µ£©,»òÊäÈëback²¢»Ø³µ·µ»ØÖ÷½çÃæ£¨back£©
+set rd=ç¨ç‹Ÿéœç¾¶è„¹
+set /p rd=è¯·é€‰æ‹©ä¸Šè¿°å­˜æ¡£ä¹‹ä¸€ä»¥è¯»å–ï¼ˆè¾“å…¥å­˜æ¡£åå­—åå›è½¦ï¼‰,æˆ–è¾“å…¥backå¹¶å›è½¦è¿”å›ä¸»ç•Œé¢ï¼ˆbackï¼‰
 if %rd% == back set /a rd=0 && cd .. && goto mainb
-if %rd% == ·µ»Ø set /a rd=0 && cd .. && goto mainb
-if %rd% == «”ªBßdÁƒÃ› cls && echo Î¹£¬ÄãËÆºõÊ²Ã´Ò²Ã»ÊäÈë¾Í»Ø³µÁË£¡ÇÉ¸¾ÄÑÎªÎŞÃ×Ö®´¶°¡£¡ && ping -n 4 127.0.0.1 >nul && goto read2
+if %rd% == è¿”å› set /a rd=0 && cd .. && goto mainb
+if %rd% == ç¨ç‹Ÿéœç¾¶è„¹ cls && echo å–‚ï¼Œä½ ä¼¼ä¹ä»€ä¹ˆä¹Ÿæ²¡è¾“å…¥å°±å›è½¦äº†ï¼å·§å¦‡éš¾ä¸ºæ— ç±³ä¹‹ç‚Šå•Šï¼ && ping -n 4 127.0.0.1 >nul && goto read2
 for /f "delims=" %%a in ( %rd% ) do ( 
 set /a sv=%%a
 )
@@ -148,23 +148,23 @@ goto %sv%
 :1
 cls
 set /a svs=1
-echo ½¨ÉèÖĞ,Ã»ÓĞÁË£¡
-choice /c 12 /m "Ñ¡Ôñ: 1:ÔÙ¿´¿´;2:·µ»ØÖ÷²Ëµ¥"
+echo å»ºè®¾ä¸­,æ²¡æœ‰äº†ï¼
+choice /c 12 /m "é€‰æ‹©: 1:å†çœ‹çœ‹;2:è¿”å›ä¸»èœå•"
 if !errorlevel! == 2 goto mainb
 if !errorlevel! == 1 goto 2
 
 :2
 set /a svs=2
-echo ÕæµÄÃ»ÓĞÁË!
-choice /c 123 /m "Ñ¡Ôñ: 1:ÔÙ¿´¿´;2:·µ»ØÖ÷²Ëµ¥;3:´æµµ"
+echo çœŸçš„æ²¡æœ‰äº†!
+choice /c 123 /m "é€‰æ‹©: 1:å†çœ‹çœ‹;2:è¿”å›ä¸»èœå•;3:å­˜æ¡£"
 if !errorlevel! == 3 goto save
 if !errorlevel! == 2 goto mainb
-if !errorlevel! == 1 echo ÕæÃ»ÁË¡£ && ping -n 4 127.0.0.1 >nul && goto mainb
+if !errorlevel! == 1 echo çœŸæ²¡äº†ã€‚ && ping -n 4 127.0.0.1 >nul && goto mainb
 
 :about
 cls
 echo By Universal963
-echo °æ±¾£ºAlpha 0.1
+echo ç‰ˆæœ¬ï¼šAlpha 0.1
 pause
 goto mainb
 
@@ -173,11 +173,11 @@ cls
 cd saves
 if !errorlevel! == 1 md saves && cd saves
 cls
-set savez=«”ªBßdÁƒÃ›
-set /p savez=¸ø´æµµÈ¡¸öÃû×Ö:
-if %savez% == «”ªBßdÁƒÃ› cls && echo Î¹£¬Äã»¹Ã»È¡Ãû×ÖÄØ£¡ && ping -n 4 127.0.0.1 >nul && cd .. && goto save
+set savez=ç¨ç‹Ÿéœç¾¶è„¹
+set /p savez=ç»™å­˜æ¡£å–ä¸ªåå­—:
+if %savez% == ç¨ç‹Ÿéœç¾¶è„¹ cls && echo å–‚ï¼Œä½ è¿˜æ²¡å–åå­—å‘¢ï¼ && ping -n 4 127.0.0.1 >nul && cd .. && goto save
 echo %svs% >%savez%
-echo ÒÑ´æµµ£¡
+echo å·²å­˜æ¡£ï¼
 cd ..
 ping -n 2 127.0.0.1 >nul 
 cls
@@ -187,20 +187,20 @@ goto %svs%
 cls
 cd saves
 cls
-if !errorlevel! == 1 echo Ã»ÓĞ´æµµÎÄ¼ş¼Ğ£¡ && pause && goto mainb
+if !errorlevel! == 1 echo æ²¡æœ‰å­˜æ¡£æ–‡ä»¶å¤¹ï¼ && pause && goto mainb
 goto delete1
 
 :delete1
 cls
 dir /b
-set rm=«”ªBßdÁƒÃ›
-set /p rm=ÇëÑ¡ÔñÉÏÊö´æµµÖ®Ò»ÒÔÉ¾³ı£¨ÊäÈë´æµµÃû×Öºó»Ø³µ£¬Èç¹ûÃ»ÓĞÄÚÈİÔò±íÊ¾´æµµÎÄ¼ş¼ĞÎª¿Õ£©,»òÊäÈëback²¢»Ø³µ·µ»ØÖ÷½çÃæ£¨back£©
+set rm=ç¨ç‹Ÿéœç¾¶è„¹
+set /p rm=è¯·é€‰æ‹©ä¸Šè¿°å­˜æ¡£ä¹‹ä¸€ä»¥åˆ é™¤ï¼ˆè¾“å…¥å­˜æ¡£åå­—åå›è½¦ï¼Œå¦‚æœæ²¡æœ‰å†…å®¹åˆ™è¡¨ç¤ºå­˜æ¡£æ–‡ä»¶å¤¹ä¸ºç©ºï¼‰,æˆ–è¾“å…¥backå¹¶å›è½¦è¿”å›ä¸»ç•Œé¢ï¼ˆbackï¼‰
 if %rm% == back set /a rm=0 && cd .. && goto mainb
-if %rm% == ·µ»Ø set /a rm=0 && cd .. && goto mainb
-if %rm% == «”ªBßdÁƒÃ› cls && echo Î¹£¬ÄãËÆºõÊ²Ã´Ò²Ã»ÊäÈë¾Í»Ø³µÁË£¡ÇÉ¸¾ÄÑÎªÎŞÃ×Ö®´¶°¡£¡ && ping -n 4 127.0.0.1 >nul && goto delete1
+if %rm% == è¿”å› set /a rm=0 && cd .. && goto mainb
+if %rm% == ç¨ç‹Ÿéœç¾¶è„¹ cls && echo å–‚ï¼Œä½ ä¼¼ä¹ä»€ä¹ˆä¹Ÿæ²¡è¾“å…¥å°±å›è½¦äº†ï¼å·§å¦‡éš¾ä¸ºæ— ç±³ä¹‹ç‚Šå•Šï¼ && ping -n 4 127.0.0.1 >nul && goto delete1
 del %rm%
 cls
-echo ÒÑÉ¾³ı!
-choice /c 12 /m "ÏÖÔÚÄãÏëÈçºÎ£¿1:¼ÌĞøÉ¾³ı£»2:·µ»ØÖ÷½çÃæ"
+echo å·²åˆ é™¤!
+choice /c 12 /m "ç°åœ¨ä½ æƒ³å¦‚ä½•ï¼Ÿ1:ç»§ç»­åˆ é™¤ï¼›2:è¿”å›ä¸»ç•Œé¢"
 if !errorlevel! == 2 set /a rm=0 && cd .. && goto mainb
 if !errorlevel! == 1 set /a rm=0 && cls && goto delete1
