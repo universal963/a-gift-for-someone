@@ -82,6 +82,8 @@ if %msg% == 3 goto delete
 if %msg% == 4 goto about
 if %msg% == 5 exit
 goto tty
+::tty label and its following labels are Easter egg for not inputing anything but pressing Enter 
+::or inputing the option not listed above.
 
 :tty
 set /a t1=%t1% + 1
@@ -89,7 +91,6 @@ if %t1%== 1 goto help
 if %t1%== 2 goto stop
 if %t1%== 3 cls && echo 好吧，你有点厉害，真的。 && goto kill
 goto leave
-
 
 :help
 cls
