@@ -6,6 +6,7 @@ set /a msg=6
 cls
 
 :start
+title Universal963 Proudly Presents
 echo.
 echo          U            U
 echo          U            U
@@ -28,6 +29,7 @@ color 07
 goto main1
 
 :main1
+title 标题还没想好
 echo =====================================================================================
 echo.
 echo.
@@ -80,7 +82,7 @@ if %msg% == 1 goto 1
 if %msg% == 2 goto read1
 if %msg% == 3 goto delete
 if %msg% == 4 goto about
-if %msg% == 5 exit
+if %msg% == 5 exit /b
 goto tty
 ::tty label and its following labels are Easter egg for not inputing anything but pressing Enter 
 ::or inputing the option not listed above.
